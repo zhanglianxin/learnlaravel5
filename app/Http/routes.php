@@ -13,4 +13,9 @@
 
 Route::auth();
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index'); // 前台主页
+
+Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function () {
+    Route::get('/', 'HomeController@index'); // 后台主页
+    Route::get('article', 'ArticleController@index'); // 文章管理
+});

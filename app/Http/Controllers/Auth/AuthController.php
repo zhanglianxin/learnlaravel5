@@ -28,7 +28,8 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+//    protected $redirectTo = '/';
+    protected $redirectTo = 'admin'; // 修改后台登陆后的跳转页
 
     /**
      * Create a new authentication controller instance.
