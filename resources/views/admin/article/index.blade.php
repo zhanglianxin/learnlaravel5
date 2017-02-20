@@ -10,7 +10,8 @@
                     <div class="panel-body">
                         @if(count($errors) > 0)
                             <div class="alert alert-danger">
-                                { !! implode('<br>', $errors->all()) !! }
+                                {{--注意不要随便带空格--}}
+                                {!! implode('<br>', $errors->all()) !!}
                             </div>
                         @endif
                         <a href="{{ url('admin/article/create') }}" class="btn btn-lg btn-primary">新增</a>
