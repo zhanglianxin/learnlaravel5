@@ -21,3 +21,5 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
     Route::resource('article', 'ArticleController'); // 资源路由
 });
 
+Route::get('article/{id}', 'ArticleController@show'); // 前台路由
+
