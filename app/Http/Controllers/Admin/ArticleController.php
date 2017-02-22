@@ -61,7 +61,7 @@ class ArticleController extends Controller
     public function update(Request $request, $id)
     {
         // articles 是表名
-        $this->validate($request, ['title' => 'required|unique:articles,title, ' . $id . '|max:255', 'body' => 'required']);
+        $this->validate($request, ['title' => 'required|unique:articles,title,' . $id . '|max:255', 'body' => 'required']);
 
         $article = Article::find($id);
         var_dump($article);
