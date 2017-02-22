@@ -43,6 +43,13 @@ class ArticleController extends Controller
         }
     }
 
+
+    public function show(Article $article)
+    {
+        // 防止出现 505
+        return view('admin/article/edit')->withArticle($article);
+    }
+
     // 编辑
     public function edit(Article $article)
     {
