@@ -18,7 +18,8 @@ Route::get('/', 'HomeController@index'); // 前台主页
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::get('/', 'HomeController@index'); // 后台主页
 //    Route::get('article', 'ArticleController@index'); // 文章管理
-    Route::resource('article', 'ArticleController'); // 资源路由
+    Route::resource('article', 'ArticleController'); // 文章资源路由
+    Route::resource('comment', 'CommentController'); // 评论资源路由
 });
 
 Route::get('article/{id}', 'ArticleController@show'); // 前台文章展示
